@@ -1,5 +1,9 @@
 (function() {
     
-    angular.module('fdfsd');
+    var appDependencies = [
+        'ui.router'
+    ];
+
+    angular.module('Rcorrie', appDependencies);
 
 })();

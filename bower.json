@@ -20,9 +20,9 @@
   ],
   "dependencies": {
     "angular": "~1.4.7",
-    "react": "~0.14.2",
     "angular-sanitize": "~1.4.7",
     "angular-ui-router": "ui-router#~0.2.15",
-    "animate.css": "~3.4.0"
+    "lodash": "~3.10.1"
+    "mirrorkey": "~1.2.0"
   }
 }
