@@ -1,0 +1,28 @@
+{
+  "name": "rcorrie",
+  "authors": [
+    "Ricardo Corrie <rcorrie90@gmail.com>"
+  ],
+  "description": "personal site for ricardo corrie",
+  "main": "www/index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "private",
+  "homepage": "rcorrie.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "react": "~0.14.2",
+    "angular-sanitize": "~1.4.7",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "animate.css": "~3.4.0"
+  }
+}
