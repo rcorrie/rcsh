@@ -1,7 +1,8 @@
 *.DS_Store
 *.sublime-*
 _gh_pages
-bower_components
+vendor
+www
 node_modules
 npm-debug.log
 test/actual
