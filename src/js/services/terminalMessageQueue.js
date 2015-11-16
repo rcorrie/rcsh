@@ -11,12 +11,14 @@
         return {
             push: push,
             getIds: getIds,
-            getById: getById
+            getById: getById,
+            clear: clear
         };
 
         function push( message ) {
+            if( !message ) return;
             queue.push( message );
-            eventBus.emit( EVENTS.newTerminalMessage, queue.length - 1 )
+            eventBus.emit( EVENTS.newTerminalMessage, getIds() )
         };
 
         function getIds() {
@@ -25,6 +27,11 @@
 
         function getById( messageId ) {
             return _.assign( {}, queue[messageId] );
+        };
+
+        function clear() {
+            queue = [];
+            eventBus.emit( EVENTS.newTerminalMessage, getIds() )
         };
 
     })

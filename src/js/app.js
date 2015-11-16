@@ -1,7 +1,8 @@
 (function() {
     
     var appDependencies = [
-        'ui.router'
+        'ui.router',
+        'ngSanitize'
     ];
 
     angular.module('Rcorrie', appDependencies);

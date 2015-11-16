@@ -1,1 +1,13 @@
+@mixin multibrowser( $rule, $val ) {
+    -webkit-#{$rule}: $val;
+    -moz-#{$rule}: $val;
+    -ms-#{$rule}: $val;
+    -o-#{$rule}: $val;
+    #{$rule}: $val;
+}
+@keyframes cursorBlink {
+    to {visibility:hidden;}
+}
+
 @import 'body';
+@import 'terminal';

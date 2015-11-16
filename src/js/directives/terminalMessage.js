@@ -4,17 +4,23 @@
 
     var App = angular.module('Rcorrie');
 
-    App.directive('terminalMessage', function() {
+    App.directive('terminalMessage', function($compile, terminalMessageQueue) {
 
         return {
             restrict: 'AE',
             scope: {
                 messageId: '='
             },
-            controller: function( $scope, terminalMessageQueue ) {
-                $scope.message = terminalMessageQueue.getById($scope.messageId);
+            link: function ( $scope, $element, $attr ) {
+
+                var packet = terminalMessageQueue.getById($scope.messageId);
+                var directive = packet.type + '-message-output';
+                var element = angular.element( '<'+directive+'></'+directive+'>' );
+                $element.append(element);
+                $compile( element )( _.assign($scope, {packet: packet}) );
+
             },
-            template: '<div><strong>{{message.type}}$ </strong> {{message.message}}</div>'
+            template: ''
         };
 
     });

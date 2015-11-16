@@ -9,7 +9,7 @@
         .state('app', {
             url: '',
             controller: 'AppController',
-            template: ' <div id="app-wrapper">\
+            template: ' <div id="terminal-wrapper">\
                             <terminal>\
                             </terminal>\
                         </div>'

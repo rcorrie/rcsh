@@ -1,0 +1,48 @@
+#terminal-wrapper{
+    line-height:35px;
+    width: 70%;
+}
+
+#terminal-input-container{
+    width: 100%;
+    height: 30px;
+    .cursor{
+        display: inline-block;
+        height: 80%;
+        width: 7px;
+        background: #4E4E4E;
+        vertical-align: middle;
+        margin-left: 5px;
+        visibility:visible;
+        @include multibrowser('animation-name', cursorBlink);
+        @include multibrowser('animation-duration', 1s);
+        @include multibrowser('animation-iteration-count', infinite);
+        @include multibrowser('animation-timing-function', steps(5, start));
+    }
+}
+
+.terminal-message{
+    &.user{
+        strong{
+            color:#25EA77;
+        }
+    }
+}
+
+#terminal-input-form{
+    position:fixed; 
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9;
+    input{
+        border:0;
+        background:none;
+        color:transparent;
+        position:absolute;
+        width:100vw;
+        height:100vh;
+        outline:0;
+    }
+}

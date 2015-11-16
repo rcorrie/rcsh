@@ -14,10 +14,12 @@
             var commandSvc = commandStr + 'Command';
             var command;
 
-            if( $injector.has( commandSvc ) ) 
+            if( $injector.has( commandSvc ) ) {
                 command = $injector.get( commandSvc );
-            else 
+            } else {
                 command = $injector.get( 'notFoundCommand' );
+                options = [commandStr];
+            }
 
             return command.run( options )
 

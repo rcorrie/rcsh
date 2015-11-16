@@ -4,13 +4,14 @@
 
     var App = angular.module('Rcorrie');
 
-    App.controller('TerminalController', function($scope, eventBus, terminalMessageQueue, terminalCommandDispatcher, EVENTS) {
+    App.controller('TerminalController', function($scope, $window, $timeout, eventBus, terminalMessageQueue, terminalCommandDispatcher, EVENTS) {
 
         $scope.terminal = {
             messages: getMessages(),
             input: '',
             fns: {
-                submitCommand: submitCommand
+                submitCommand: submitCommand,
+                positionWindow: positionWindow
             }
         };
 
@@ -26,10 +27,22 @@
 
         function submitCommand( command ) {
             terminalCommandDispatcher(command);
+            clearInput();
         };
 
-        function pushNewMessage( message ) {
-            $scope.terminal.messages.push( message );
+        function clearInput() {
+            $scope.terminal.input = '';
+        };
+
+        function pushNewMessage( messages ) {
+            $scope.terminal.messages = messages;
+            positionWindow();
+        };
+
+        function positionWindow() {
+            $timeout(function() {
+                $window.scrollTo(0, document.body.scrollHeight);
+            }, 0)
         }
 
 

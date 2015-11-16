@@ -10,4 +10,12 @@
 
     }));
 
+    App.constant('ACTIONS', mirrorkey({
+
+        terminal: {
+            clear: null
+        }
+
+    }))
+
 })();
