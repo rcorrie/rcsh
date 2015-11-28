@@ -12,6 +12,10 @@
             template: ' <div id="terminal-wrapper">\
                             <terminal>\
                             </terminal>\
+                        </div>\
+                        <div id="peripherals">\
+                            <menu></menu>\
+                            <chat></chat>\
                         </div>'
         })
     })

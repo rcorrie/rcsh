@@ -27,7 +27,7 @@
                     <li>SQL</li>\
                     <li>HTML</li>\
                     <li>CSS</li>\
-                    <li>JSON</li>\
+                    <li>Firebase</li>\
                 </ul>\
                 </td>\
                 <td>\
@@ -39,16 +39,19 @@
                     <li>SASS</li>\
                     <li>Ionic UI</li>\
                     <li>Foundation</li>\
+                    <li>Bootstrap</li>\
                 </ul>\
                 </td>\
                 <td>\
                 <ul style="font-size:0.9em;">\
+                    <li>SPAs</li>\
+                    <li>XHR (ajax)</li>\
+                    <li>JSON</li>\
+                    <li>REST</li>\
                     <li>Cordova</li>\
                     <li>Grunt</li>\
                     <li>Gulp</li>\
                     <li>Karma</li>\
-                    <li>GIT</li>\
-                    <li>Linux</li>\
                 </ul>\
                 </td>\
                 <td>\
@@ -57,7 +60,8 @@
                     <li>MVC</li>\
                     <li>Flux</li>\
                     <li>Unit Testing</li>\
-                    <li>REST</li>\
+                    <li>GIT</li>\
+                    <li>Linux</li>\
                 </ul>\
             </td></tr>\
             <tr><td colspan="4">### Experience<br><br></td></tr>\
